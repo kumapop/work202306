@@ -69,24 +69,6 @@ ul {list-style: none;}
   width: 100%;
   margin: 0 auto;
 }
-/*
-@media (min-width: 576px) {
-  .container {
-    max-width: 546px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}*/
 
 .row {
   width: 100%;
@@ -181,13 +163,66 @@ ul {list-style: none;}
 }
 
 /*三個三角箭頭動畫*/
-.motion { 
+.motion {
+  display: block;
+  align-items: flex-end;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 180px;
+}
+.motion img {
+  display: block;
   width: 100%;
-    max-width: 540px;
-    height: 180px;
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true);     /* 背景画像指定 */
-    background-repeat: repeat-x;  
-    background-position: right 1rem center;    
+  max-width: 180px;
+  float: right;
+}
+.slide-top {
+  -webkit-animation: slide-top 4.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s infinite both;
+  animation: slide-top 4.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s infinite both;
+}
+.slide-top-two {
+  -webkit-animation: slide-top 5.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s infinite both;
+  animation: slide-top 5.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  1.5s infinite both;
+}
+.slide-top-three {
+  -webkit-animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s infinite both;
+  animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940)  1s infinite both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
 }
 
 /*主要內容*/
