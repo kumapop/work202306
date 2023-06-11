@@ -182,7 +182,8 @@ ul {list-style: none;}
 
 /*三個三角箭頭動畫*/
 .motion { 
-    width: 540px;
+  width: 100%;
+    max-width: 540px;
     height: 180px;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true);     /* 背景画像指定 */
     background-repeat: repeat-x;  
@@ -534,14 +535,21 @@ footer {
   padding: 5rem 0px;
   border-top: 1px solid #FFFFFF;
 }
+@media (min-width: 576px) {
+  footer {
+   flex-direction: column;
+  }
+}
 .top-price {
   width: 160px;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1.2;
+  margin-top: 2rem;
 }
 .footer-logo {
   max-width: 215px;
+  margin-top: 2rem;
 }
 .footer-link {
   height: 88px;
@@ -564,4 +572,9 @@ footer {
 }
 .social li {
  margin-right: 32px;
+}
+@media (max-width: 576px) {
+  .social {
+   flex-direction: column;
+  }
 }
